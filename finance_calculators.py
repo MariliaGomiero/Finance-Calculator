@@ -9,7 +9,13 @@ import math
 
 print("investment - to calculate the amount of interest you'll earn on your investment")
 print("bond       - to calculate the amount you'll have to pay on a home loan \n")
+
 investment_type = input("Enter either 'investment' or 'bond' from the menu above to proceed: \n").lower()
+
+# Improved input validation
+while investment_type not in ['investment', 'bond']:
+    print("Invalid choice. Please enter 'investment' or 'bond'.")
+    investment_type = input("Enter either 'investment' or 'bond' from the menu above to proceed: \n").lower()
 
 # calculation of the future amount/monthly repayment according to the investment type the user input (investment or bond).
 
